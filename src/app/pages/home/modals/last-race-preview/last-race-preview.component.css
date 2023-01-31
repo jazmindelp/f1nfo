@@ -1,0 +1,60 @@
+
+.last-race-container > .modal{
+    padding: 1.25vw;
+   
+
+}
+
+
+.modal > .last-race-preview{
+    margin: auto;
+}
+
+
+.last-race-preview > tr > th{
+    padding: 1vw;
+    width: 15vw;
+    font-size: 1vw;
+    border-bottom: none;
+}
+
+.last-race-title{
+    background-color: transparent;
+    color: #000;
+    font-size: 1.75vw;
+    letter-spacing: 0.02vw;
+    margin-bottom: 0.5vw;
+}
+
+.last-race-preview > tr > .table-title{
+    font-size: 1.25vw;
+    background-color: #000;
+    color: #FFFF;
+    border-bottom: none;
+}
+
+
+.last-race-preview > tr > .position{
+    width: 5vw;
+    font-family: 'Bebas Neue', cursive;
+    border-bottom: none;
+
+}
+
+.last-race-preview > tr > .points{
+    width: 5vw;
+    font-family: 'Bebas Neue', cursive;
+    border-bottom: none;
+}
+
+.modal > button {
+    background-color: #3a3636;
+   font-weight: lighter;
+   color: #FFFF;
+   margin: 1vw 1vw 0 1vw;
+}
+
+.modal > button:hover {
+    background-color: #474343;
+    transition: 0.25s ease-out;
+}

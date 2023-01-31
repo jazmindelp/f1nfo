@@ -1,0 +1,23 @@
+<div class="standings-container">
+<h1 class="animate__animated animate__fadeIn championship-title">Driver Standings</h1>
+<mat-spinner *ngIf="loading" class="spinner" color="accent"></mat-spinner>
+<table  *ngIf="!loading" class="animate__animated animate__fadeIn standings"  >
+    <tr >
+        <th class="table-title">Pos.</th>
+        <th class="table-title">Name</th>
+        <th class="table-title">Constructor</th>
+        <th class="table-title">Points</th>
+        <th class="table-title">Wins</th>
+    </tr>
+    <tr *ngFor="let driver of driverStandings.DriverStandings" >
+        <th class="position" >{{driver.position}}</th>
+        <th class="name" >{{driver.Driver.givenName}} {{driver.Driver.familyName}}</th>
+       <th [class]="driver.Constructors[0].constructorId" class="name">{{driver.Constructors[0].name}}</th>
+    
+      
+        <th class="points">{{driver.points}}</th>
+        <th class="wins">{{driver.wins}}</th>
+    </tr>
+
+</table>
+</div>

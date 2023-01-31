@@ -1,0 +1,19 @@
+<div class="standings-container">
+<h1 class="animate__animated animate__fadeIn championship-title">Constructor Standings</h1>
+<mat-spinner *ngIf="loading" class="spinner" color="accent"></mat-spinner>
+<table  *ngIf="!loading" class="animate__animated animate__fadeIn standings"  >
+    <tr >
+        <th class="table-title">Pos.</th>
+        <th class="table-title">Team</th>
+        <th class="table-title">Points</th>
+        <th class="table-title">Wins</th>
+    </tr>
+    <tr *ngFor="let constructor of constructorStandings.ConstructorStandings" >
+        <th class="position">{{constructor.position}}</th>
+        <th class="name" [class]="constructor.Constructor.constructorId">{{constructor.Constructor.name}}</th>
+        <th class="points">{{constructor.points}}</th>
+        <th class="wins">{{constructor.wins}}</th>
+    </tr>
+
+</table>
+</div>

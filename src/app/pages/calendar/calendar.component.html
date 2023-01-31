@@ -1,0 +1,111 @@
+
+ <mat-spinner *ngIf="loading" class="spinner" color="accent"> </mat-spinner>
+
+<div class="calendar-container"  *ngIf="!loading" >
+      
+       
+    
+<div class="animate__animated animate__fadeIn card" *ngFor="let race of calendar.Races" >
+        
+      
+        <div class="title-container">
+
+       <span>
+            <h1 class="round">Round {{race.round}}</h1>
+            <h1 class="card-title">{{race.Circuit.raceName}}</h1>
+            <h3 class="card-subtitle">{{race.Circuit.Location.locality}}</h3>
+            <h2 class="card-subtitle" >{{race.Circuit.circuitName}} </h2>
+           
+        </span>
+            <img src="assets/circuits/{{ race.Circuit.circuitId}}.png" alt="cicuit-layout" class="circuit-layout"/>
+        </div>
+
+   
+        <div class="card-container">
+    
+        <div class="gp-info">
+
+            <div class="date-schedule" *ngIf="!loading">
+    <p class="time-table" *ngIf="!loading">
+            <span class="day" *ngIf="!loading">{{race.date | date:"dd"}}</span>
+            <span class="month" *ngIf="!loading">{{race.date | date:"MMM"}}</span>
+    </p>
+
+    <p class="time-table" *ngIf="!loading">
+        <span class="event">Race</span>
+        <span class="time">{{(race.time).slice(0,5)}} UTC</span>
+    </p>
+    
+            </div>            
+            <div class="date-schedule">
+    <p class="time-table" >
+            <span class="day" >{{race.FirstPractice.date | date:"dd"}}</span>
+            <span class="month" >{{race.FirstPractice.date | date:"MMM"}}</span>
+    </p>
+
+    <p class="time-table" >
+        <span class="event">Free Practice 1</span>
+        <span class="time" >{{(race.FirstPractice.time).slice(0,5)}} UTC</span>
+    </p>
+    
+            </div>
+
+            <div class="date-schedule">
+    <p class="time-table" >
+            <span class="day" >{{race.SecondPractice.date | date:"dd"}}</span>
+            <span class="month" >{{race.SecondPractice.date | date:"MMM"}}</span>
+    </p>
+
+    <p class="time-table" >
+        <span class="event">Free Practice 2</span>
+        <span class="time" >{{(race.SecondPractice.time).slice(0,5)}} UTC</span>
+    </p>
+    
+            </div>
+
+
+            <div class="date-schedule" >
+    <p class="time-table" *ngIf="race.ThirdPractice; else showThis">
+            <span class="day" >{{race?.ThirdPractice?.date | date:"dd"}}</span>
+            <span class="month"  >{{race?.ThirdPractice?.date | date:"MMM"}}</span>
+    </p>
+    
+    <p class="time-table"*ngIf="race.ThirdPractice" >
+        <span class="event">Third Practice</span>
+        <span class="time" >{{(race.ThirdPractice?.time).slice(0,5)}} UTC</span>
+    </p>
+  
+                </div>
+    <!-- Conditional rendering for sprint days (no third practice) -->
+        <ng-template #showThis>
+                
+                <p class="time-table" >
+                <span class="day" >{{race.Sprint.date | date:"dd"}}</span>
+                <span class="month"  >{{race.Sprint.date | date:"MMM"}}</span>
+                </p>
+                <p class="time-table" >
+                        <span class="event">Sprint</span>
+                        <span class="time" >{{(race.Sprint.time).slice(0,5)}} UTC</span>
+                    </p>
+        </ng-template>
+  
+    
+          
+
+            <div class="date-schedule">
+    <p class="time-table" >
+            <span class="day" >{{race.Qualifying.date | date:"dd"}}</span>
+            <span class="month" >{{race.Qualifying.date | date:"MMM"}}</span>
+    </p>
+
+    <p class="time-table" >
+        <span class="event">Qualifying</span>
+        <span class="time" >{{(race.Qualifying.time).slice(0,5)}} UTC</span>
+    </p>
+    
+            </div>
+
+         
+        </div>
+
+</div>

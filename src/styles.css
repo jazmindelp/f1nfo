@@ -1,0 +1,437 @@
+@import '~animate.css/animate.min';
+
+*{
+    margin: 0;
+    font-family: 'Bebas Neue', cursive;
+    box-sizing: border-box;
+}
+
+
+.spinner{
+    margin: 12vw auto ;
+    position: relative;
+}
+
+.main-home{
+position: fixed;
+margin: 0;
+display: flex;
+justify-content: flex-start;
+padding: 0;
+min-height:  100%;
+width: 100%;
+background-image: url(https://images5.alphacoders.com/317/thumb-1920-317664.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+.next-race-container{
+margin: 0;
+}
+.next-race{
+    background-color: #000000;
+    z-index: 1;
+    padding: 1.25vw 0.5vw;
+    border-radius: 4px;
+    width: 30vw;
+    margin: 2vw;
+}
+
+h1{
+    color: #FFFF;
+    font-size: 2.5vw;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 0.1vw;
+    margin-bottom: 2vh;
+    background-color: #000000;
+}
+
+h2{
+    color: #FFFF;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 0.90vw;
+    margin-top: 1.5vh;
+    background-color: #000000;
+}
+
+.countdown-container{
+    display: flex;
+    justify-content: space-around;
+    background-color: #000000;
+    z-index: 1;
+    padding: 1.25vw 0.5vw;
+    border-radius: 4px;
+    width: 30vw;
+    margin: 0.75vw 2vw;
+    color: #FFFF;
+}
+
+.countdown-unit{
+    background-color: #3a3636f1;
+    width: 5vw;
+    padding-top: 0.75vh;
+    border-radius: 0.1vw;
+}
+.count-text{
+    background-color: #FFFF;
+    color: #000000;
+    font-weight: 800;
+    padding: 0.1vw 0.5vw;
+    border-radius: 0.1vw;
+    margin-top: 0.5vw;
+}
+.count-number{
+    margin: 0;
+    background-color: #3a3636f1;
+}
+
+.toggle-button{
+    all: unset;
+    background-color: #ffca80;
+    text-align: center;
+    padding: 1vw;
+    border-radius: 0.2vw;
+    margin: 2vw;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1vw;
+    box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.342);
+}
+
+.toggle-button:hover{
+    cursor: pointer;
+    background-color:  rgba(240, 240, 240, 0.925);
+    transition: color 1s ease-in;
+    box-shadow: none;
+}
+
+.github{
+    height: 1.5vw;
+    position: fixed;
+    left: 1vw;
+    bottom: 1vw;
+}
+
+.github:hover{
+    cursor: pointer;
+}
+
+
+/* Standings' pages */
+    .standings-container{
+      padding-bottom: 2vw;
+    }
+    
+    .standings{
+        width: 85vw;
+        border-spacing:0; 
+        border-radius: 0.4vw;
+        box-shadow: 0 1px 9px 1px rgba(37, 36, 36, 0.28);
+        margin: 1vw auto 1.25vw auto ;
+        
+    }
+    .championship-title{
+        background-color: #FFFF;
+        color: #000;
+        width: fit-content;
+        margin: 2.25vw auto 0 auto;
+        padding: 0.75vw 1.15vw 0 1.15vw;
+        border-radius: 0.2vw;
+    }
+    .table-title{
+    font-size: 1.65vw;
+    font-weight: 200;
+    padding: 1.5vw 1vw;
+    letter-spacing: 0.05vw;
+    background-color: #cfa66c;
+    color: #000;
+    }
+    
+    .position{
+    width: 1vw;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25vw;
+    border-bottom-style: outset;
+    background-color:#f0f0f0;
+    }
+    
+    .name{
+    width: 6vw;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25vw;
+    background-color:#ffffff;
+    border-bottom-style: outset;
+    margin-top: 3vw;
+    position: relative
+    }
+
+    .name::before{
+        height:100%;  
+        width: 1.5vw;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+
+
+   /* Team color */
+    .red_bull::before{
+        background-color: #1E5BC6;
+    }
+
+    .mercedes::before{
+        background-color: #6CD3BF;
+    }
+
+    .ferrari::before{
+        background-color: #ED1C24;
+    }
+
+    .mclaren::before{
+        background-color: #F58020;
+    }
+
+    .alpine::before{
+        background-color: #2293D1;
+    }
+
+    .alphatauri::before{
+    background-color: #4E7C9B;
+    }
+
+    .aston_martin::before{
+        background-color: #2D826D;
+    }
+
+    .williams::before{
+        background-color: #37BEDD;
+    }
+
+    .alfa::before{
+        background-color: #B12039;
+    }
+
+    .haas::before{
+        background-color: #B6BABD;
+    }
+
+    .points{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25vw;
+    width: 6vw;
+    border-bottom-style: outset;
+    background-color:#f0f0f0;
+    }
+    
+    .wins{
+        width: 6vw;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.25vw;
+    border-bottom-style: outset;
+    background-color:#FFFF;
+    
+    }
+    th{
+    margin: auto;
+    padding: 1.5vw 0;
+    }
+
+
+    /* calendar & weekend schedule */
+
+.calendar-container{
+    display: flex;
+   margin: auto;
+   flex-flow: wrap;
+   justify-content: space-around;
+ 
+   }
+   .card{
+      width: 40vw;
+       margin: 2vw 4vw;
+     display: inline-block;
+     box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.342);
+     background-color: #cfa66c;
+   }
+   
+   
+   
+   .card-container{
+   
+       margin: 0;
+   
+      display: flex;
+      flex-direction: column;
+     padding: 0.5vw 1.5vw;
+   }
+   
+   .card:hover{
+       transition: ease-in 0.3s;
+       box-shadow: none;
+   }
+   
+   .title-container{
+       display: flex;
+       justify-content: space-between;
+       padding: 1.15vw 1.15vw 0 1.35vw;
+   }
+   
+   .round{
+       border-radius: 0.2vw;
+       padding: 0.5vw;
+       font-size: 1.15vw;
+       width: 5.5vw;
+      
+   }
+   
+   .card-title{
+       color: #000;
+       margin: 1vw 0;
+       text-align: left;
+       font-size: 1.5vw;
+       letter-spacing: 0.04vw;
+       margin-right: 0.75vw;
+       text-transform: uppercase;
+   }
+   
+   .card-subtitle{
+       margin: 0.5vw 0.5vw 0.5vw 0;
+       background-color: transparent;
+       color: #000;
+       font-family: 'Bebas Neue';
+       font-size: 1.5vw;
+       text-align: left;
+       letter-spacing: 0.04vw;
+   }
+   
+   .title-container >span >h3{
+       font-family: 'Lato', sans-serif;
+       font-size: 1vw;
+       margin: 1.5vw 0;
+   }
+   .circuit-layout{
+      width: 40%;
+      height: auto;
+       background-color: #fffffef5;
+       border-radius: 0.2vw;
+   margin: 0;
+   padding: 0.5vw;
+   }
+   
+    .gp-info{
+        background-color: transparent;
+    width: 100%;
+    
+    }
+    
+    .gp-info > h1{
+        width: auto;
+        margin: 0.5vw;
+        font-size: 1.55vw;
+    }
+    
+    
+    .date-schedule{
+        display: flex;
+        background-color: #ffca80;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+       width: 100%;
+       padding: 0.25vw 0 0.25vw 0.5vw;
+       margin: 0.5vw 0;
+    }
+    
+    .date-schedule:hover{
+        background-color: #fdd9a6;
+        transition: ease-out 0.5s;
+        box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.342);
+    }
+    
+    .date-schedule >p{
+    
+        background-color: transparent;
+        border-radius: 0.3vw;
+    }
+    
+    .time-table{
+        display: flex;
+        flex-direction: column;
+      padding-right: 0.75vw;
+     
+    }
+    .day{
+        font-size: 1.15vw;
+        margin: 0 0.25vw;
+        text-align: center;
+    }
+    .month{
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        font-size: 0.85vw;
+        background-color: #3a3636b6;
+        padding: 0.25vw;
+        border-radius: 0.25vw;
+        color: #FFFF;
+    }
+    .event{
+        font-size: 1.15vw;
+       letter-spacing: 0.05vw;
+    }
+    
+    .time{
+        font-family: 'Lato', sans-serif;
+        font-size: 0.85vw;
+        text-align: left;
+        padding: 0.25vw 0;
+    }
+
+    .modal{
+       position: relative;
+       width: 40vw;
+       margin: 2vw 15vw;
+       height: fit-content;
+       padding: 0.5vw;
+       background-color: #cfa66c;
+       border-radius: 0.4vw;
+    }
+    
+
+    .modal-schedule > .date-schedule{
+        background: rgba(255, 255, 255, 0.349);
+        height: fit-content;
+       margin: 1vw 0;
+      }
+
+    .modal-schedule > .date-schedule > .time-table > .day{
+        font-size: 2vw;
+
+    }
+  
+    .modal-schedule > .date-schedule > .time-table > .month{
+        font-size: 0.75vw;
+    }
+
+    .modal-schedule > .date-schedule > .time-table > .event{
+        font-size: 1.5vw;
+    }
+    .modal-schedule > .date-schedule > .time-table > .time{
+        font-size: 1.1vw;
+    }
+
+
+    .modal-schedule{
+        width: 100%;
+        padding: 0 1vw 1vw 1vw;
+    }
+
+
+

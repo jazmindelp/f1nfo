@@ -1,0 +1,68 @@
+
+
+<div class="main-home">
+
+    <div class="animate__animated animate__fadeIn next-race-container" *ngIf="!loading">
+
+       
+        <div class="next-race">
+           
+            <h1>Next race: Bahrain Grand Prix   </h1>
+            <h2>{{nextRace[0].Circuit.circuitName}}</h2>
+            <h2>{{nextRace[0].date | date:"dd-MM-YY"}}</h2>
+        </div>
+
+        <div class="animate__animated animate__fadeIn countdown-container">
+            <div class="countdown-unit">
+      
+                <h1 class="count-number">{{days}}</h1>
+                <h2 class="count-text">Days</h2>
+            </div>
+            <div class="countdown-unit">
+                <h1 class="count-number">{{hours}}</h1>
+                <h2 class="count-text">Hours</h2>
+            </div>
+            <div class="countdown-unit">
+                <h1 class="count-number">{{minutes}}</h1>
+                <h2 class="count-text">Minutes</h2>
+            </div>
+            
+            <div class="countdown-unit">
+                <h1 class="count-number">{{seconds}}</h1>
+                <h2 class="count-text">Seconds</h2>
+            </div>
+        </div>
+
+        <button class="toggle-button" 
+                (click)="toggleWeekendModal()" >
+            Weekend schedule
+        </button>
+
+        <button class="toggle-button"
+                (click)="toggleLastRaceModal()"
+         >
+            Last race results
+        </button>
+ 
+ </div>
+
+     <!-- weekend modal  -->
+ <app-weekend *ngIf="showWeekend"></app-weekend>
+
+
+     <!-- last race modal -->
+ <app-last-race *ngIf="showLastRace"></app-last-race>
+
+
+<!-- Github icon -->
+
+<a href="https://github.com/jazmindelp" target="_blank">
+
+    <img src="assets/icon/github-mark-white.png" alt="github logo" class="github"/>
+</a>
+
+ 
+ </div>
+ 
+ 
+ 

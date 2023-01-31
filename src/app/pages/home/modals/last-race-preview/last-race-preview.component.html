@@ -1,0 +1,32 @@
+
+<div class="last-race-container">
+<div class="modal animate__animated animate__bounceInRight" *ngIf="!loading">
+
+    <h1 class="last-race-title">{{lastRace.raceName}}</h1>
+
+    <table class="last-race-preview">
+
+        <tr >
+            <th class="table-title position">Pos.</th>
+            <th class="table-title">Name</th>
+            <th class="table-title">Constructor</th>
+            <th class="table-title points">Points</th>
+      
+        </tr>
+
+        <tr *ngFor="let results of lastRace.Results.slice(0, 5)"
+                      >
+            <th class="position">{{results.position}}</th>
+            <th class="name">{{results.Driver.givenName}} {{results.Driver.familyName}}</th>
+            <th class="name" [class]="results.Constructor.constructorId">{{results.Constructor.name}}</th>
+            <th class="points">{{results.points}}</th>
+         
+        </tr> 
+    </table>
+
+    <button class="toggle-button" routerLinkActive="active" routerLink="last-race-results">
+        Full race results
+    </button>
+</div>
+
+</div>

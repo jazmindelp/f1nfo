@@ -1,0 +1,38 @@
+
+
+<mat-spinner *ngIf="loading" class="spinner" color="accent"></mat-spinner>
+<div class="standings-container" *ngIf="!loading">
+
+    <h1 class=" championship-title">
+        Round {{lastRace.round}}: {{lastRace.raceName}}</h1>
+   
+    <table class="standings animate__animated animate__fadeIn">
+
+        <tr >
+            <th class="table-title">Pos.</th>
+            <th class="table-title">Name</th>
+            <th class="table-title">Constructor</th>
+            <th class="table-title">Laps</th>
+            <th class="table-title">Time</th>
+            <th class="table-title">Points</th>
+      
+        </tr>
+
+        <tr *ngFor="let results of lastRace.Results"
+                      >
+            <th class="position">{{results.position}}</th>
+            <th class="name">{{results.Driver.givenName}} {{results.Driver.familyName}}</th>
+            <th class="name" [class]="results.Constructor.constructorId">{{results.Constructor.name}}</th>
+            <th class="name">{{results.laps}}</th>
+            <th class="name" *ngIf="results.Time; else showFinish">
+                {{results.Time.time}}
+            </th>
+
+            <!-- Conditional rendering for no time finishers -->
+            <ng-template #showFinish>
+                <th class="name">{{results.status}}</th>
+            </ng-template>
+            <th class="points">{{results.points}}</th>
+         
+        </tr> 
+    </table>
